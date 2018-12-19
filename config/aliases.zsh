@@ -1,6 +1,7 @@
 alias ccat="pygmentize"
 alias less="less -r"
 alias mkcd="take"
+alias shipper="caffeinate -dis shipper"
 
 up() {
 	COUNTER=$1
