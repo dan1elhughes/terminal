@@ -1,0 +1,1 @@
+export LESSOPEN='|pygmentize %s'
