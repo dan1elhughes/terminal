@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
-OUTPUT="$HOME/.oh-my-zsh/custom/"
+ZSHFOLDER="$HOME/.oh-my-zsh"
 
-cp -v "./zshrc" "$OUTPUT../../.zshrc"
+cp -v "./zshrc" "$HOME/.zshrc"
 for f in ./config/*; do
-	cp -v "$f" "$OUTPUT"
+	cp -rv "$f" "$ZSHFOLDER/custom"
 done
 
 . ~/.zshrc
