@@ -1,9 +1,6 @@
 alias ccat="pygmentize"
 alias less="less -r"
 alias mkcd="take"
-alias shipper="caffeinate -dis shipper"
-alias ship="shipper deploy"
-alias £="£ --prompt.emoji=false"
 alias atom="atom -a"
 
 up() {
