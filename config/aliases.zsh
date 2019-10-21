@@ -2,6 +2,8 @@ alias ccat="pygmentize"
 alias less="less -r"
 alias mkcd="take"
 alias atom="atom -a"
+alias cat="bat"
+alias ping="prettyping --nolegend"
 
 up() {
 	COUNTER=$1
