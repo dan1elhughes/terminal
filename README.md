@@ -28,10 +28,11 @@ Every program, config and alias is optional.
 
 Installs:
 
-- [`iterm2`](https://iterm2.com/) (terminal)
-- [`pure`](https://github.com/sindresorhus/pure) (zsh prompt)
-- [`snazzy`](https://github.com/sindresorhus/iterm2-snazzy) (iterm theme)
+- [`iterm2`](https://iterm2.com/) (terminal).
+- [`pure`](https://github.com/sindresorhus/pure) (zsh prompt).
+- [`snazzy`](https://github.com/sindresorhus/iterm2-snazzy) (iterm theme).
 - [`z`](https://github.com/rupa/z) (directory navigator).
+- [`s`](https://github.com/zquestz/s) (google stuff from terminal).
 
 ## Local configuration
 
