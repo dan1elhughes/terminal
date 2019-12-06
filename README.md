@@ -17,7 +17,7 @@ Every program, config and alias is optional.
 ### Installed programs
 
 - [`bat`](https://github.com/sharkdp/bat) is aliased to `cat`
-- [`fd`](https://github.com/sharkdp/fd) is aliased to `find`
+- [`fd`](https://github.com/sharkdp/fd) is aliased to `f`
 - [`prettyping`](https://github.com/denilsonsa/prettyping) is aliased to `ping`
 
 ### Git config
