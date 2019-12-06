@@ -1,10 +1,10 @@
-# zshconfig
+# terminal
 
 ![screenshot](.media/screenshot.png)
 
 Installer for my terminal programs, aliases and functions.
 
-Every program is optional.
+Every program, config and alias is optional.
 
 ## Usage
 
