@@ -5,9 +5,6 @@ ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 mkdir -p "$ZSH_CUSTOM"
 mkdir -p ".tmp"
 
-# I'm lazy and often forget to do this.
-find installers -name '*.zsh' | xargs chmod u+x
-
 # Enable colours.
 autoload -U colors && colors
 
