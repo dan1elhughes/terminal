@@ -32,5 +32,7 @@ local prompt='%(?,%{$fg[blue]%}❯ ,%{$fg[red]%}❯ )%{$reset_color%}'
 # current directory display
 local directory_path='%{$fg[blue]%}%~'
 
+local tel_env='%{$TRIAS_PRETTY_NAME%}'
+
 # Prompt definition
-PROMPT="${directory_path}${git_info}${newline}${prompt}"
+PROMPT="${directory_path}${git_info}${newline}${tel_env}${prompt}"
