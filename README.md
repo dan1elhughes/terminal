@@ -21,6 +21,7 @@ Every program, config and alias is optional.
 - [`bat`](https://github.com/sharkdp/bat) (aliased to `cat`).
 - [`fd`](https://github.com/sharkdp/fd) (aliased to `f`).
 - [`prettyping`](https://github.com/denilsonsa/prettyping) (aliased to `ping`).
+- [`rectangle`](https://rectangleapp.com/) window manager.
 - [`ripgrep`](https://github.com/BurntSushi/ripgrep).
 - [`s-search`](https://github.com/zquestz/s) (aliased to `s`).
 - [`z`](https://github.com/rupa/z) directory navigator.
