@@ -27,3 +27,18 @@ watchtests() {
 
     fd -e go | entr -c sh -c "go test ./... && echo ✅ || echo ❌"
 }
+
+# Send the current branch into staging or prod.
+#
+# Deploy to staging:    yeet
+# Deploy to prod:       yeet prod
+yeet() {
+	if [ "$#" -eq 0 ]; then
+        env="s101"
+	else
+        env="$1"
+	fi
+
+    branch=`git rev-parse --abbrev-ref HEAD`
+    shipper deploy --environment $env $branch
+}
