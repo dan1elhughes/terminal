@@ -28,11 +28,7 @@ Every program, config and alias is optional.
 
 ### Theme
 
-To enable, set your theme in `~/.zshrc`:
-
-```bash
-ZSH_THEME="dan1elhughes-terminal"
-```
+I use [Starship](https://starship.rs), with [this config](https://github.com/dan1elhughes/starshipconfig).
 
 ### Git config
 
