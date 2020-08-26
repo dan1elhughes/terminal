@@ -1,1 +1,1 @@
-brew install fd
+brew install entr
