@@ -1,5 +1,8 @@
+# Find and edit.
 function fedit() {
-    eval $EDITOR "$(rg --files | fzf --preview 'bat --style numbers,changes --color=always {}')"
+    selected=$(rg --files | fzf --preview 'bat --style numbers,changes --color=always --line-range :$LINES {}')
+    [ -z "$selected" ] && exit
+    eval $EDITOR "$selected"
 }
 
 # TODO: z not found
