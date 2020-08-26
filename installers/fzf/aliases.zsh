@@ -5,7 +5,10 @@ function fedit() {
     eval $EDITOR "$selected"
 }
 
-# TODO: z not found
-# function fz() {
-#     z | awk '{print $2}' | fzf --preview 'ls {}'
-# }
+# Find and checkout git branch.
+function fcheckout() {
+    branches=$(git branch --format='%(refname:short)')
+    selected=$(echo $branches | fzf --preview 'git log --oneline master..{}')
+    [ -z "$selected" ] && exit
+    git checkout "$selected"
+}
