@@ -12,3 +12,9 @@ function fcheckout() {
     [ -z "$selected" ] && exit
     git checkout "$selected"
 }
+
+function fcd() {
+    selected=$(fd --type directory | fzf --preview 'tree -L 2 {} | head -n $LINES')
+    [ -z "$selected" ] && exit
+    cd $selected
+}
