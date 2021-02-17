@@ -12,12 +12,6 @@ alias £="£ --prompt.emoji=false"
 # Shorthand for protobuf generation. Usage: `proto .`
 alias proto="../bin/generate_protobufs"
 
-# Shorthand for loading logs for the service in the current directory
-logs() {
-    SERVICE=`basename $(pwd)`
-    slog -fs "$SERVICE"
-}
-
 # Watch all files for changes, and run tests when they change.
 watchtests() {
     if [ ! -f /usr/local/bin/fd ]; then
