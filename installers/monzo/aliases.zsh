@@ -6,6 +6,16 @@ alias shipper="caffeinate -dis shipper"
 alias ship="shipper deploy --s101"
 alias shipp="shipper deploy --prod"
 
+shippp() {
+    pr="$1"
+    ship $1 && shipp $1
+}
+
+merge() {
+    pr="$1"
+    gh pr merge $1 --squash --delete-branch
+}
+
 # Disable CLI emoji to fix spacing bug.
 alias £="£ --prompt.emoji=false"
 
