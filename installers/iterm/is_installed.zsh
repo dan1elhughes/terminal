@@ -1,4 +1,4 @@
-if brew cask ls --versions iterm2 > /dev/null; then
+if brew ls --versions iterm2 --cask > /dev/null; then
   exit 0
 else
   exit 1
