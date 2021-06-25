@@ -11,9 +11,9 @@ shippp() {
     ship $1 && shipp $1
 }
 
-merge() {
-    pr="$1"
-    gh pr merge $1 --squash --delete-branch
+y() {
+    app="$1"
+    yarn && yarn workspace "@mondough/$1" start
 }
 
 # Disable CLI emoji to fix spacing bug.
