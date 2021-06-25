@@ -9,3 +9,15 @@ function copypr() {
 
     echo "✅ Pull request copied to clipboard in Slack format."
 }
+
+function waitmerge() {
+    pr=$1
+
+    gh pr merge $1 --squash --delete-branch > /dev/null 2>&1
+    while [ $? -ne 0 ]; do
+        echo -n "."
+        gh pr merge $1 --squash --delete-branch > /dev/null 2>&1
+    done
+
+    echo
+}
