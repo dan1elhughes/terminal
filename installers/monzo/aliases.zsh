@@ -88,7 +88,7 @@ gen() {
         echo "⏭" | tee -a $LOGFILE
     else
         builtin cd "$WEAREDEV/$dir/graphql" > $LOGFILE
-        go run scripts/gqlgen.go > $LOGFILE
+        GO111MODULE=auto go run scripts/gqlgen.go > $LOGFILE
         builtin cd "-" > $LOGFILE
         echo "✅" | tee -a $LOGFILE
     fi
