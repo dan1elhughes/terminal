@@ -63,11 +63,6 @@ gen() {
     # brew install coreutils
     dir=$(basename `realpath $1`)
 
-    # MANIFESTS #
-    echo -ne "$dir: manifests " | tee -a $LOGFILE
-    $WEAREDEV/bin/generate_manifests "$WEAREDEV/$dir" > $LOGFILE
-    echo "✅" | tee -a $LOGFILE
-
     # RPCMAP #
     echo -ne "$dir: rpcmap " | tee -a $LOGFILE
     go run "$WEAREDEV/tools/rpcmap/cmd/rpcmap" -generate "$WEAREDEV/$dir" > $LOGFILE
