@@ -11,6 +11,12 @@ shippp() {
     ship $1 && shipp $1
 }
 
+# Watch the rollout of pods.
+watchpods() {
+    dir=$(basename `pwd`)
+    watch kubectl get pods -l app="io.gmon.$dir"
+}
+
 y() {
     app="$1"
     yarn && yarn workspace "@mondough/$1" start
