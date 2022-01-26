@@ -22,16 +22,6 @@ alias £="£ --prompt.emoji=false"
 # Shorthand for protobuf generation. Usage: `proto .`
 alias proto="../bin/generate_protobufs"
 
-# Watch all files for changes, and run tests when they change.
-watchtests() {
-    if [ ! -f /usr/local/bin/fd ]; then
-        echo "fd not installed"
-        return 1
-    fi
-
-    fd -e go | entr -c sh -c "go test ./... && echo ✅ || echo ❌"
-}
-
 # Send the current branch into staging or prod.
 #
 # Deploy to staging:    yeet
