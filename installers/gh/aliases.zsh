@@ -2,10 +2,10 @@ function copypr() {
     echo "⏳ Reading pull request $1..."
     content=$(gh pr view $1 --json additions,deletions,title,url)
 
-    title=$(echo $content | jq '.title')
-    url=$(echo $content | jq '.url')
-    additions=$(echo $content | jq '.additions')
-    deletions=$(echo $content | jq '.deletions')
+    title=$(echo $content | jq -r '.title')
+    url=$(echo $content | jq -r '.url')
+    additions=$(echo $content | jq -r '.additions')
+    deletions=$(echo $content | jq -r '.deletions')
 
     echo -e ":github-green: $title (+$additions, -$deletions)\n:pr-arrow-darkmode: $url" | pbcopy
 
