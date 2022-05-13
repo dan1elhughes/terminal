@@ -6,9 +6,14 @@ alias shipper="caffeinate -dis shipper"
 alias ship="shipper deploy --s101"
 alias shipp="shipper deploy --prod"
 
+letsgo() {
+    pr="$1"
+    waitmerge "$pr" && shippp "$pr"
+}
+
 shippp() {
     pr="$1"
-    ship $1 && shipp $1
+    ship "$pr" && shipp "$pr"
 }
 
 # Watch the rollout of pods.
