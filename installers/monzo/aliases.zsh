@@ -3,23 +3,14 @@
 
 # Shorthands for deployment. Usage: `ship <pr or branch name>`
 alias shipper="caffeinate -dis shipper"
-alias ship="shipper deploy --s101"
-alias shipp="shipper deploy --prod"
+alias ship="shipper deploy --disable-progressive-rollouts"
 
 letsgo() {
     pr="$1"
-    waitmerge "$pr" && shippp "$pr"
-}
-
-shippp() {
-    pr="$1"
-    ship "$pr" && shipp "$pr"
-}
-
-# Watch the rollout of pods.
-watchpods() {
-    dir=$(basename `pwd`)
-    watch kubectl get pods -l app="io.gmon.$dir"
+    waitmerge "$pr" && \
+    vpn && \
+    ship --s101 "$pr" && \
+    ship --prod "$pr"
 }
 
 y() {
@@ -45,7 +36,7 @@ yeet() {
 	fi
 
     branch=`git rev-parse --abbrev-ref HEAD`
-    shipper deploy --environment $env $branch
+    ship --environment $env $branch
 }
 
 # Run all the codegen for any changed services.
