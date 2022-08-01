@@ -1,7 +1,11 @@
 # Watch all .go files for changes, and run tests when they change.
 watchtests() {
-    if [ ! -f /usr/local/bin/fd ]; then
+    if ! command -v fd &> /dev/null; then
         echo "fd not installed"
+        return 1
+    fi
+    if ! command -v entr &> /dev/null; then
+        echo "entr not installed"
         return 1
     fi
 
@@ -10,7 +14,7 @@ watchtests() {
 
 # Watch all .go files for changes, and build when they change.
 watchbuild() {
-    if [ ! -f /usr/local/bin/fd ]; then
+    if ! command -v fd &> /dev/null; then
         echo "fd not installed"
         return 1
     fi
