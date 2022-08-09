@@ -29,6 +29,8 @@ alias proto="../bin/generate_protobufs"
 # Deploy to staging:    yeet
 # Deploy to prod:       yeet prod
 yeet() {
+	vpn
+
 	if [ "$#" -eq 0 ]; then
         env="s101"
 	else
