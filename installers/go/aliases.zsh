@@ -9,9 +9,7 @@ watchtests() {
         return 1
     fi
 
-    while true; do
-        fd -e go | entr -c sh -c "go test ./... && echo ✅ || echo ❌"
-    done
+    fd -e go | entr -c sh -c "go test ./... && echo ✅ || echo ❌"
 }
 
 # Watch all .go files for changes, and build when they change.
@@ -25,7 +23,5 @@ watchbuild() {
         return 1
     fi
 
-    while true; do
-        fd -e go | entr -c sh -c "go build ./... && echo ✅ || echo ❌"
-    done
+    fd -e go | entr -c sh -c "go build ./... && echo ✅ || echo ❌"
 }
