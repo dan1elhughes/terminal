@@ -20,6 +20,10 @@ watchbuild() {
         echo "fd not installed"
         return 1
     fi
+    if ! command -v entr &> /dev/null; then
+        echo "entr not installed"
+        return 1
+    fi
 
     while true; do
         fd -e go | entr -c sh -c "go build ./... && echo ✅ || echo ❌"
